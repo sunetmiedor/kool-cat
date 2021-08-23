@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+   <title>Tremend Coding School - Social Media</title>
+</head>
+<body>
+  <h1>My first amazing project 😊</h1>
+
+  {% for post in posts %}
+    <div class="item">
+        <header class="item-header">
+            <div class="item-user">
+                <img src="https://picsum.photos/id/237/100/100">
+                <div class="item-username">	{{ post['author'] }}</div>
+                <div class="item-date"> a postat in data de <span>{{ post['date'] }}</span></div>
+        </div>
+        <div class="item-title"> {{ post['title'] }}</div>
+        </header>
+        <main class="item-main">
+        <div class="item-content"> {{ post['description'] }}</div>
+        <div class="item-image"><img src="/upload/{{ post['image_name'] }}" ></div>
+    </div>
+{% endfor %}
+
+ <form enctype="multipart/form-data" action="{{ url_for('new_post') }}" method="post">
+    <h1>Adauga postare</h1>
+
+    <div class="formular-container">
+      <div class="formular">
+        <div class="formular-section">
+          <label for="nume">Nume Utilizator</label>
+          <input id="nume" name="post_author" type="text" placeholder="Numele dvs" />
+        </div>
+        <div class="formular-section">
+          <label for="titlu">Titlu</label>
+          <input id="titlu" name="post_title" type="text" placeholder="Titlu" />
+        </div>
+        <div class="descriere">
+          <label for="descriere">Descriere</label>
+          <textarea name="post_description" id="descriere"></textarea>
+        </div>
+        <div class="upload">
+          <label for="poza">Imagine</label>
+          <input type="file" id="poza" name="post_image" />
+				</div>
+
+				<div class="submit">
+					<input type="submit" value="Salveaza">
+				</div>
+      </div>
+    </div>
+</form>
+
+    
+
+</body>
+</html>

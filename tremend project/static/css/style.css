@@ -1,0 +1,143 @@
+body {
+    font-family: sans-serif;
+   }
+
+   .item {
+    max-width: 700px;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 10px;
+    background-color: #efefef;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    margin: auto;
+   }
+    
+   .item-header {
+    padding-bottom: 20px;
+   }
+    
+   .item-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+   }
+    
+   .item-user * {
+    padding-right: 5px;
+   }
+    
+   .item-user img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+   }
+    
+   .item-username {
+    font-weight: bold;
+    color: red;
+    padding-left: 10px;
+   }
+    
+   .item-date span {
+    color: rgb(65, 149, 182);
+   }
+    
+   .item-title {
+    font-size: 20px;
+    font-weight: bold;
+   }
+    
+   .item-content {
+    padding-bottom: 20px;
+   }
+    
+   .item-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+   }
+    
+    
+   body > * {
+    max-width: 860px;
+    margin: auto;
+    padding: 0 30px;
+   }
+    
+   .page-actions {
+    text-align: right;
+    font-size: 0;
+   }
+    
+   .page-actions a {
+    border: 2px solid gray;
+    color: #000000;
+    background-color: #68bbe3;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1rem;
+   }
+    
+   .page-actions a.active {
+    background-color: white;
+   }
+    
+   .page-actions a.active:hover {
+    background-color: #68bbe3;
+   }
+    
+   .page-actions a:first-child {
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+   }
+    
+   .page-actions a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   }
+    
+   .page-actions a:hover {
+    background-color: white;
+    color: black;
+   }
+    
+   .formular {
+    border: 2px solid black;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+    
+   .formular > * {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px;
+   }
+    
+   .formular .upload,
+   .formular .submit,
+   .formular .descriere {
+    width: 100%;
+   }
+    
+   .formular .submit {
+    text-align: right;
+   }
+    
+   label {
+    font-weight: bold;
+   }
+    
+   textarea,
+   input {
+    width: 100%;
+   }
+    
+   textarea {
+    height: 100px;
+   }
+   
